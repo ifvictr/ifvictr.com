@@ -10,8 +10,8 @@ const Base = styled(Flex).attrs({ p: 4, pb: 5 })`
         ${cx('indigo.6')},
         ${cx('violet.4')}
     );
-    border-bottom-left-radius: 50% 200px;
-    border-bottom-right-radius: 50% 200px;
+    border-bottom-left-radius: 50% 100px;
+    border-bottom-right-radius: 50% 100px;
     left: -30%;
     // left: -45%;
     min-height: 50vh;
@@ -19,6 +19,10 @@ const Base = styled(Flex).attrs({ p: 4, pb: 5 })`
     position: relative;
     text-shadow: rgba(0, 0, 0, 0.376) 0px 1px 2px;
     width: 160%;
+    ${({ theme }) => theme.mediaQueries.md} {
+        border-bottom-left-radius: 50% 200px;
+        border-bottom-right-radius: 50% 200px;
+    }
 `
 
 const Avatar = styled(Image).attrs({ width: 160 })`
