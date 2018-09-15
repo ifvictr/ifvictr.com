@@ -15,7 +15,7 @@ const Inner = styled(Card.withComponent(Flex).withComponent(Link)).attrs({
 })`
     box-shadow: ${({ theme }) => theme.boxShadows[1]};
     position: relative;
-    text-shadow: rgba(0, 0, 0, 0.376) 0px 1px 2px;
+    text-shadow: rgba(0, 0, 0, 0.376) 0 1px 2px;
     transition: transform ${({ theme }) => theme.transition};
     will-change: transform;
     width: 100%;

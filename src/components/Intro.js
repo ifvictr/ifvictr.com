@@ -5,10 +5,10 @@ import Container from './Container'
 import { cx } from '../theme'
 
 const Base = styled(Flex).attrs({ p: 4, pb: 5 })`
-    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.376));
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.376));
     min-height: 50vh;
     position: relative;
-    text-shadow: rgba(0, 0, 0, 0.376) 0px 1px 2px;
+    text-shadow: rgba(0, 0, 0, 0.376) 0 1px 2px;
     &:before {
         background-image: linear-gradient(
             32deg,
