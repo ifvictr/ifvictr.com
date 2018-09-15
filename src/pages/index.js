@@ -9,8 +9,8 @@ import Layout from '../components/Layout'
 import PostCard from '../components/PostCard'
 import ProjectCard from '../components/ProjectCard'
 
-const Projects = styled(Flex).attrs({ justifyContent: 'center', mt: -4, p: 4, pt: 5 })`
-    background-image: radial-gradient(rgb(221, 225, 228) 1px, transparent 1px);
+const Projects = styled(Flex).attrs({ justifyContent: 'center', mt: -6, p: 4, pt: 6 })`
+    background-image: radial-gradient(${({ theme }) => theme.colors.smoke} 1px, transparent 1px);
     background-size: 16px 16px;
 `
 
