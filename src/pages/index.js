@@ -54,7 +54,7 @@ const IndexPage = ({ data }) => (
                         <Text color="muted">A few of the projects I’ve worked on recently.</Text>
                     </SectionDescription>
                     <SectionGrid>
-                        {data.allMarkdownRemark.edges.map(({ node }) => node.frontmatter).map(project => (
+                        {data.projects.edges.map(({ node }) => node.frontmatter).map(project => (
                             <ProjectCard data={project} key={project.name} />
                         ))}
                     </SectionGrid>
@@ -69,7 +69,9 @@ const IndexPage = ({ data }) => (
                         <Text color="muted">Writing on just about anything, really.</Text>
                     </SectionDescription>
                     <SectionGrid>
-                        {/* TODO: Render posts */}
+                        {data.posts.edges.map(({ node }) => node.frontmatter).map(post => (
+                            <PostCard data={post} key={post.slug} />
+                        ))}
                     </SectionGrid>
                 </Flex>
             </Container>
@@ -82,7 +84,33 @@ export default () => (
     <StaticQuery
         query={graphql`
             query {
-                allMarkdownRemark(
+                posts: allMarkdownRemark(
+                    filter: {
+                        fileAbsolutePath: { regex: "/(/data/posts)/.*.md$/" }
+                    }
+                    limit: 3
+                    sort: {
+                        fields: [frontmatter___created_at], order: DESC
+                    }
+                ) {
+                    edges {
+                        node {
+                            html
+                            frontmatter {
+                                name
+                                slug
+                                featured_image_url
+                                created_at
+                                published_at
+                            }
+                        }
+                    }
+                }
+                projects: allMarkdownRemark(
+                    filter: {
+                        fileAbsolutePath: { regex: "/(/data/projects)/.*.md$/" }
+                    }
+                    limit: 6
                     sort: {
                         fields: [frontmatter___created_at], order: DESC
                     }
