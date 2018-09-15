@@ -5,23 +5,28 @@ import Container from './Container'
 import { cx } from '../theme'
 
 const Base = styled(Flex).attrs({ p: 4, pb: 5 })`
-    background-image: linear-gradient(
-        32deg,
-        ${cx('indigo.6')},
-        ${cx('violet.4')}
-    );
-    border-bottom-left-radius: 50% 100px;
-    border-bottom-right-radius: 50% 100px;
-    left: -30%;
-    // left: -45%;
     min-height: 50vh;
-    overflow: hidden;
     position: relative;
     text-shadow: rgba(0, 0, 0, 0.376) 0px 1px 2px;
-    width: 160%;
-    ${({ theme }) => theme.mediaQueries.md} {
-        border-bottom-left-radius: 50% 200px;
-        border-bottom-right-radius: 50% 200px;
+    &:before {
+        background-image: linear-gradient(
+            32deg,
+            ${cx('blue.6')},
+            ${cx('indigo.5')},
+            ${cx('violet.4')}
+        );
+        border-bottom-left-radius: 50% 100px;
+        border-bottom-right-radius: 50% 100px;
+        content: '';
+        display: block;
+        height: 100%;
+        left: -50%;
+        position: absolute;
+        width: 160%;
+        ${({ theme }) => theme.mediaQueries.md} {
+            border-bottom-left-radius: 50% 200px;
+            border-bottom-right-radius: 50% 200px;
+        }
     }
 `
 
@@ -46,15 +51,17 @@ const NameHeading = styled(Heading).attrs({
 
 const Intro = props => (
     <Base alignItems="center" justifyContent="center" {...props}>
-        <Flex alignItems="center">
-            <Box mr={3}>
-                <Avatar src="https://github.com/ifvictr.png" alt="" />
-            </Box>
-            <Container maxWidth={32} ml={3}>
-                <NameHeading>Victor Truong</NameHeading>
-                <Text fontSize={3} color="white">Web developer + designer.</Text>
-            </Container>
-        </Flex>
+        <Container maxWidth={64} width={1} style={{ zIndex: 1 }}>
+            <Flex alignItems="center">
+                <Box mr={3}>
+                    <Avatar src="https://github.com/ifvictr.png" alt="" />
+                </Box>
+                <Container maxWidth={32} ml={3}>
+                    <NameHeading>Victor Truong</NameHeading>
+                    <Text fontSize={3} color="white">Web developer + designer.</Text>
+                </Container>
+            </Flex>
+        </Container>
     </Base>
 )
 
