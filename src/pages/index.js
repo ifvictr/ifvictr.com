@@ -114,6 +114,7 @@ export default () => (
                     filter: {
                         fileAbsolutePath: { regex: "/(/data/projects)/.*.md$/" }
                     }
+                    limit: 6
                     sort: {
                         fields: [frontmatter___created_at], order: DESC
                     }
