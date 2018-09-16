@@ -1,4 +1,5 @@
 import { StaticQuery, graphql } from 'gatsby'
+import _ from 'lodash'
 import React from 'react'
 import { Box, Flex, Heading, Text } from 'rebass'
 import styled from 'styled-components'
@@ -69,9 +70,13 @@ const IndexPage = ({ data }) => (
                         <Text color="muted">Writing on just about anything, really.</Text>
                     </SectionDescription>
                     <SectionGrid>
-                        {data.posts.edges.map(({ node }) => node.frontmatter).map(post => (
-                            <PostCard data={post} key={post.slug} />
-                        ))}
+                        {data.posts.edges
+                            .map(({ node }) => node.frontmatter)
+                            .filter(post => post.published_at)
+                            .slice(0, 6)
+                            .map(post => (
+                                <PostCard data={post} key={post.slug} />
+                            ))}
                     </SectionGrid>
                 </Flex>
             </Container>
@@ -88,7 +93,6 @@ export default () => (
                     filter: {
                         fileAbsolutePath: { regex: "/(/data/posts)/.*.md$/" }
                     }
-                    limit: 3
                     sort: {
                         fields: [frontmatter___created_at], order: DESC
                     }
@@ -110,7 +114,6 @@ export default () => (
                     filter: {
                         fileAbsolutePath: { regex: "/(/data/projects)/.*.md$/" }
                     }
-                    limit: 6
                     sort: {
                         fields: [frontmatter___created_at], order: DESC
                     }
