@@ -1,5 +1,4 @@
 import { Link } from 'gatsby'
-import _ from 'lodash'
 import React from 'react'
 import { Flex, Card, Heading } from 'rebass'
 import styled from 'styled-components'
