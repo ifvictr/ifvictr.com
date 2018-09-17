@@ -22,7 +22,9 @@ injectGlobal`
         src: url(/fonts/Poppins-Bold.ttf) format('truetype');
     }
 
-    *, *:before, *:after {
+    *,
+    *:before,
+    *:after {
         box-sizing: border-box;
         font-weight: inherit;
         text-rendering: optimizeLegibility;
