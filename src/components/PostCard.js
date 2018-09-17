@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import { Flex, Card, Heading } from 'rebass'
+import { Flex, Card, Heading, Text } from 'rebass'
 import styled from 'styled-components'
 
 import { palette } from 'theme'
@@ -37,6 +37,11 @@ const color = value => {
     return palette[paletteKeys[key(value) % paletteKeys.length]]
 }
 
+const prettyTimestamp = timestamp => {
+    const date = new Date(timestamp)
+    return `${date.getMonth() + 1}/${date.getDate() + 1}/${date.getFullYear()}`
+}
+
 const PostCard = ({ data, ...props }) => {
     const base = color(data.slug)
     return (
@@ -52,8 +57,8 @@ const PostCard = ({ data, ...props }) => {
                     )`
                 }}
             >
-                <PostName mb={2}>{data.name}</PostName>
-                {/* <Text color="muted">{data.published_at}</Text> */}
+                <Text color="white" mb={1}>{prettyTimestamp(data.published_at)}</Text>
+                <PostName>{data.name}</PostName>
             </Inner>
         </Base>
     )
