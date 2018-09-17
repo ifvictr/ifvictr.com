@@ -34,9 +34,10 @@ injectGlobal`
     }
 
     body {
+        color: ${theme.colors.black};
         font-family: ${theme.font};
         font-size: ${theme.fontSizes[2]}px;
-        font-weight: 300;
+        font-weight: 400;
         margin: 0;
         overflow-x: hidden;
         padding: 0;
