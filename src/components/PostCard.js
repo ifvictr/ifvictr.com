@@ -46,9 +46,9 @@ const PostCard = ({ data, ...props }) => {
                 style={{
                     backgroundImage: `linear-gradient(
                         24deg,
-                        ${base[6]},
-                        ${base[4]},
-                        ${base[2]}
+                        ${base[7]},
+                        ${base[5]},
+                        ${base[3]}
                     )`
                 }}
             >
