@@ -24,7 +24,13 @@ const Posts = styled(Flex).attrs({ justifyContent: 'center', p: 4 })`
     background-position: 0 0, 64px 0;
 `
 
-const SectionDescription = styled(Box).attrs({ align: 'right', mr: 3, pr: 3, width: 1 / 4 })`
+const SectionDescription = styled(Box).attrs({
+    align: 'right',
+    flex: '0 0 15%',
+    mr: 3,
+    pr: 3,
+    width: 1 / 4
+})`
     border-right: 2px solid ${({ theme }) => theme.colors.smoke};
 `
 
