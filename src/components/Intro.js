@@ -1,8 +1,9 @@
 import React from 'react'
 import { Box, Flex, Heading, Image, Text } from 'rebass'
 import styled from 'styled-components'
-import Container from './Container'
-import { cx } from '../theme'
+
+import Container from 'components/Container'
+import { cx } from 'theme'
 
 const Base = styled(Flex).attrs({ p: 4, pb: 5 })`
     filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.376));

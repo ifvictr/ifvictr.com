@@ -1,7 +1,8 @@
 import React from 'react'
 import { Box, Flex, Text } from 'rebass'
 import styled from 'styled-components'
-import Container from './Container'
+
+import Container from 'components/Container'
 
 const Base = styled(Box).attrs({ bg: 'snow', p: 4, pb: 5 })``
 

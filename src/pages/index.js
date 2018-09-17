@@ -2,12 +2,13 @@ import { StaticQuery, graphql } from 'gatsby'
 import React from 'react'
 import { Box, Flex, Heading, Text } from 'rebass'
 import styled from 'styled-components'
-import Container from '../components/Container'
-import Footer from '../components/Footer'
-import Intro from '../components/Intro'
-import Layout from '../components/Layout'
-import PostCard from '../components/PostCard'
-import ProjectCard from '../components/ProjectCard'
+
+import Container from 'components/Container'
+import Footer from 'components/Footer'
+import Intro from 'components/Intro'
+import Layout from 'components/Layout'
+import PostCard from 'components/PostCard'
+import ProjectCard from 'components/ProjectCard'
 
 const Projects = styled(Flex).attrs({ justifyContent: 'center', mt: -6, p: 4, pt: 6 })`
     background-image: radial-gradient(${({ theme }) => theme.colors.smoke} 1px, transparent 1px);

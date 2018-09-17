@@ -14,6 +14,7 @@
     "babel-plugin-styled-components": "^1.7.1",
     "gatsby": "^2.0.0-beta.98",
     "gatsby-plugin-react-helmet": "^3.0.0-beta.4",
+    "gatsby-plugin-resolve-src": "^2.0.0-beta.1",
     "gatsby-plugin-styled-components": "^3.0.0-beta.3",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",

@@ -2,7 +2,8 @@ import { Link } from 'gatsby'
 import React from 'react'
 import { Flex, Card, Heading } from 'rebass'
 import styled from 'styled-components'
-import { palette } from '../theme'
+
+import { palette } from 'theme'
 
 const Base = styled(Flex.withComponent('li'))`
     min-height: 8rem;

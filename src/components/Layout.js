@@ -2,7 +2,8 @@ import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import { Box } from 'rebass'
 import { ThemeProvider, injectGlobal } from 'styled-components'
-import theme from '../theme'
+
+import theme from 'theme'
 
 injectGlobal`
     @font-face {
