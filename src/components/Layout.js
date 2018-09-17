@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Helmet from 'react-helmet'
 import { Box } from 'rebass'
 import { ThemeProvider, injectGlobal } from 'styled-components'
 import theme from '../theme'
@@ -45,10 +46,42 @@ injectGlobal`
 
 `
 
+const name = 'Victor Truong'
+const title = name
+const description = ''
+const image = ''
+const url = 'https://ifvictr.com'
+
 const Layout = ({ children }) => (
-    <ThemeProvider theme={theme}>
-        <Box>{children}</Box>
-    </ThemeProvider>
+    <Fragment>
+        <Helmet
+            defaultTitle={name}
+            titleTemplate={`%s — ${name}`}
+            meta={[
+                { charSet: 'utf-8' },
+                { name: 'description', content: description },
+                { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+                { name: 'theme-color', content: theme.colors.primary },
+                { name: 'twitter:card', content: 'summary_large_image' },
+                { name: 'twitter:description', content: description },
+                { name: 'twitter:domain', content: url },
+                { name: 'twitter:image:src', content: image },
+                { name: 'twitter:title', content: title },
+                { property: 'og:description', content: description },
+                { property: 'og:image', content: image },
+                { property: 'og:image:height', content: 512 },
+                { property: 'og:image:width', content: 512 },
+                { property: 'og:locale', content: 'en_US' },
+                { property: 'og:site_name', content: name },
+                { property: 'og:title', content: title },
+                { property: 'og:type', content: 'website' },
+                { property: 'og:url', content: url }
+            ]}
+        />
+        <ThemeProvider theme={theme}>
+            <Box children={children} />
+        </ThemeProvider>
+    </Fragment>
 )
 
 export default Layout
