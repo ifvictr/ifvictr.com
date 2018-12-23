@@ -47,9 +47,7 @@ const NameHeading = styled(Heading).attrs({
     fontSize: 6,
     fontWeight: 300,
     mb: 1
-})`
-    letter-spacing: 2px;
-`
+})``
 
 const Intro = props => (
     <Base alignItems="center" justifyContent="center" {...props}>
