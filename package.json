@@ -1,12 +1,11 @@
 {
   "name": "ifvictr.com",
   "version": "5.0.0",
-  "main": "index.js",
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop"
   },
-  "repository": "https://github.com/ifvictr/next.ifvictr.com",
+  "repository": "https://github.com/ifvictr/ifvictr.com",
   "author": "Victor Truong <me@ifvictr.com>",
   "license": "MIT",
   "private": true,
