@@ -1,6 +1,6 @@
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import React from 'react'
-import { Flex, Card, Heading, Text } from 'rebass'
+import { Card, Flex, Heading, Link, Text } from 'rebass'
 import styled from 'styled-components'
 
 import { palette } from 'theme'
