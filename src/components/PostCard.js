@@ -47,7 +47,7 @@ const PostCard = ({ data, ...props }) => {
     return (
         <Base {...props}>
             <Inner
-                to={`/posts/${data.slug}`}
+                to={`https://blog.ifvictr.com/${data.slug}`}
                 style={{
                     backgroundImage: `linear-gradient(
                         24deg,
