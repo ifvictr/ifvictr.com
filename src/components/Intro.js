@@ -58,7 +58,9 @@ const Intro = props => (
                 </Box>
                 <Container maxWidth={32} ml={3}>
                     <NameHeading>Victor Truong</NameHeading>
-                    <Text fontSize={3} color="white">Web developer + designer.</Text>
+                    <Text fontSize={3} color="white">
+                        Software developer, startup enthusiast, & neophiliac. Always building.
+                    </Text>
                 </Container>
             </Flex>
         </Container>
