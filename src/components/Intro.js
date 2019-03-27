@@ -54,7 +54,7 @@ const Intro = props => (
         <Container maxWidth={64} width={1} style={{ zIndex: 1 }}>
             <Flex alignItems="center">
                 <Box mr={3}>
-                    <Avatar src="https://github.com/ifvictr.png" alt="" />
+                    <Avatar src="https://gravatar.com/avatar/82c79c6a2c438c0d9c113cc543012db3?s=200" alt="Victor Truong" />
                 </Box>
                 <Container maxWidth={32} ml={3}>
                     <NameHeading>Victor Truong</NameHeading>
