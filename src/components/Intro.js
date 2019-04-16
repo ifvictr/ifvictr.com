@@ -32,7 +32,7 @@ const Base = styled(Flex).attrs({ p: 4, pb: 5 })`
     }
 `
 
-const Avatar = styled(Image).attrs({ width: 160 })`
+const Avatar = styled(Image).attrs({ width: 200 })`
     border-radius: ${({ theme }) => theme.pill};
     box-shadow: ${({ theme }) => theme.boxShadows[1]};
     transition: transform ${({ theme }) => theme.transition};
@@ -42,13 +42,6 @@ const Avatar = styled(Image).attrs({ width: 160 })`
     }
 `
 
-const NameHeading = styled(Heading).attrs({
-    color: 'white',
-    fontSize: 6,
-    fontWeight: 300,
-    mb: 1
-})``
-
 const Intro = props => (
     <Base alignItems="center" justifyContent="center" {...props}>
         <Container maxWidth={64} width={1} style={{ zIndex: 1 }}>
@@ -57,7 +50,8 @@ const Intro = props => (
                     <Avatar src="https://gravatar.com/avatar/82c79c6a2c438c0d9c113cc543012db3?s=200" alt="Victor Truong" />
                 </Box>
                 <Container maxWidth={32} ml={3}>
-                    <NameHeading>Victor Truong</NameHeading>
+                    <Heading color="white" fontSize={6}>Victor Truong</Heading>
+                    <Heading color="white" fontSize={3} mb={2}>@ifvictr</Heading>
                     <Text fontSize={3} color="white">
                         Software developer, startup enthusiast, & neophiliac. Always building.
                     </Text>
