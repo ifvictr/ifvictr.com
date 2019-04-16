@@ -39,7 +39,7 @@ const color = value => {
 
 const prettyTimestamp = timestamp => {
     const date = new Date(timestamp)
-    return `${date.getMonth() + 1}/${date.getDate() + 1}/${date.getFullYear()}`
+    return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate() + 1}`
 }
 
 const PostCard = ({ data, ...props }) => {
