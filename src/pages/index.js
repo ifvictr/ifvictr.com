@@ -58,7 +58,9 @@ const IndexPage = ({ data }) => (
                 <Flex /* flexDirection={['column', null, 'row']} */>
                     <SectionDescription>
                         <SectionHeading>Projects</SectionHeading>
-                        <Text color="muted">A few of the projects I’ve worked on recently.</Text>
+                        <Text color="muted">
+                            A few projects I’ve built/collabed on recently.
+                        </Text>
                     </SectionDescription>
                     <SectionGrid>
                         {data.projects.edges.map(({ node }) => node.frontmatter).map(project => (
@@ -73,7 +75,9 @@ const IndexPage = ({ data }) => (
                 <Flex /* flexDirection={['column', null, 'row']} */>
                     <SectionDescription>
                         <SectionHeading>Posts</SectionHeading>
-                        <Text color="muted">Writing on just about anything, really.</Text>
+                        <Text color="muted">
+                            Writing about anything, really.
+                        </Text>
                     </SectionDescription>
                     <SectionGrid>
                         {data.posts.edges
