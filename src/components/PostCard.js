@@ -58,7 +58,7 @@ const PostCard = ({ data, ...props }) => {
                 }}
             >
                 <Text color="white" mb={1}>{prettyTimestamp(data.published_at)}</Text>
-                <PostName>{data.name}</PostName>
+                <PostName>{data.title}</PostName>
             </Inner>
         </Base>
     )

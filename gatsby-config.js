@@ -6,15 +6,15 @@ module.exports = {
         {
             resolve: 'gatsby-source-filesystem',
             options: {
-                name: 'posts',
-                path: `${__dirname}/data/posts`
+                name: 'projects',
+                path: `${__dirname}/data/projects`
             }
         },
         {
-            resolve: 'gatsby-source-filesystem',
+            resolve: 'gatsby-source-ghost',
             options: {
-                name: 'projects',
-                path: `${__dirname}/data/projects`
+                apiUrl: 'https://cms.ifvictr.com',
+                contentApiKey: '865ddc4a0575e2adb5735966b5'
             }
         },
         'gatsby-transformer-remark'

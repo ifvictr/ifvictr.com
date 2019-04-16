@@ -63,9 +63,11 @@ const IndexPage = ({ data }) => (
                         </Text>
                     </SectionDescription>
                     <SectionGrid>
-                        {data.projects.edges.map(({ node }) => node.frontmatter).map(project => (
-                            <ProjectCard data={project} key={project.name} />
-                        ))}
+                        {data.projects.edges
+                            .map(({ node }) => node.frontmatter)
+                            .map(project => (
+                                <ProjectCard data={project} key={project.name} />
+                            ))}
                     </SectionGrid>
                 </Flex>
             </Container>
@@ -81,11 +83,10 @@ const IndexPage = ({ data }) => (
                     </SectionDescription>
                     <SectionGrid>
                         {data.posts.edges
-                            .map(({ node }) => node.frontmatter)
-                            .filter(post => post.published_at)
+                            .map(({ node }) => node)
                             .slice(0, 6)
                             .map(post => (
-                                <PostCard data={post} key={post.slug} />
+                                <PostCard data={post} key={post.id} />
                             ))}
                     </SectionGrid>
                 </Flex>
@@ -99,24 +100,19 @@ export default () => (
     <StaticQuery
         query={graphql`
             query {
-                posts: allMarkdownRemark(
-                    filter: {
-                        fileAbsolutePath: { regex: "/(/data/posts)/.*.md$/" }
-                    }
-                    sort: {
-                        fields: [frontmatter___created_at], order: DESC
-                    }
+                posts: allGhostPost(
+                    limit: 6
+                    sort: { order: DESC, fields: [published_at] }
                 ) {
                     edges {
                         node {
+                            id
+                            title
+                            slug
                             html
-                            frontmatter {
-                                name
-                                slug
-                                featured_image_url
-                                created_at
-                                published_at
-                            }
+                            feature_image
+                            published_at
+                            excerpt
                         }
                     }
                 }
@@ -125,9 +121,7 @@ export default () => (
                         fileAbsolutePath: { regex: "/(/data/projects)/.*.md$/" }
                     }
                     limit: 6
-                    sort: {
-                        fields: [frontmatter___created_at], order: DESC
-                    }
+                    sort: { order: DESC, fields: [frontmatter___created_at] }
                 ) {
                     edges {
                         node {
