@@ -120,7 +120,7 @@ export default () => (
                     filter: {
                         fileAbsolutePath: { regex: "/(/data/projects)/.*.md$/" }
                     }
-                    limit: 6
+                    # limit: 6
                     sort: { order: DESC, fields: [frontmatter___created_at] }
                 ) {
                     edges {
