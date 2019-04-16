@@ -35,11 +35,6 @@ const Base = styled(Flex).attrs({ p: 4, pb: 5 })`
 const Avatar = styled(Image).attrs({ width: 200 })`
     border-radius: ${({ theme }) => theme.pill};
     box-shadow: ${({ theme }) => theme.boxShadows[1]};
-    transition: transform ${({ theme }) => theme.transition};
-    will-change: transform;
-    &:hover {
-        transform: scale(1.05);
-    }
 `
 
 const Intro = props => (
