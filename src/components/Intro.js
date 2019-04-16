@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Container from 'components/Container'
 import { cx } from 'theme'
 
-const Base = styled(Flex).attrs({ p: 4, pb: 5 })`
+const Base = styled(Flex).attrs({ color: 'white', p: 4, pb: 5 })`
     filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.376));
     min-height: 50vh;
     position: relative;
@@ -45,9 +45,9 @@ const Intro = props => (
                     <Avatar src="https://gravatar.com/avatar/82c79c6a2c438c0d9c113cc543012db3?s=200" alt="Victor Truong" />
                 </Box>
                 <Container maxWidth={32} ml={3}>
-                    <Heading color="white" fontSize={6}>Victor Truong</Heading>
-                    <Heading color="white" fontSize={3} mb={2}>@ifvictr</Heading>
-                    <Text fontSize={3} color="white">
+                    <Heading fontSize={6}>Victor Truong</Heading>
+                    <Heading fontSize={3} mb={2}>@ifvictr</Heading>
+                    <Text fontSize={3}>
                         Software developer, startup enthusiast, & neophiliac. Always building.
                     </Text>
                 </Container>
