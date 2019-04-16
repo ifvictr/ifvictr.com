@@ -10,18 +10,12 @@ import Layout from 'components/Layout'
 import PostCard from 'components/PostCard'
 import ProjectCard from 'components/ProjectCard'
 
-const Projects = styled(Flex).attrs({ justifyContent: 'center', mt: -6, p: 4, pt: 6 })`
-    background-image: radial-gradient(${({ theme }) => theme.colors.smoke} 1px, transparent 1px);
-    background-size: 16px 16px;
-`
-
-const Posts = styled(Flex).attrs({ justifyContent: 'center', p: 4 })`
-    background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='15' x2='100%25' y2='15' stroke='%23ecf5fa'/%3E%3C/svg%3E"),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath stroke='%23faeef0' d='M15 0v16'/%3E%3C/svg%3E");
-    background-size: 100vw 1.5em, 32px 32px;
-    background-repeat: repeat, repeat-y;
-    background-position: 0 0, 64px 0;
+const Section = styled(Flex).attrs({ justifyContent: 'center', p: 4 })`
+    background-image: linear-gradient(
+        to bottom,
+        ${({ theme }) => theme.colors.white},
+        ${({ theme }) => theme.colors.snow}
+    );
 `
 
 const SectionDescription = styled(Box).attrs({
@@ -53,7 +47,7 @@ const SectionGrid = styled(Flex.withComponent('ol')).attrs({ flexWrap: 'wrap' })
 const IndexPage = ({ data }) => (
     <Layout>
         <Intro />
-        <Projects>
+        <Section>
             <Container maxWidth={64}>
                 <Flex /* flexDirection={['column', null, 'row']} */>
                     <SectionDescription>
@@ -71,8 +65,8 @@ const IndexPage = ({ data }) => (
                     </SectionGrid>
                 </Flex>
             </Container>
-        </Projects>
-        <Posts>
+        </Section>
+        <Section>
             <Container maxWidth={64}>
                 <Flex /* flexDirection={['column', null, 'row']} */>
                     <SectionDescription>
@@ -91,7 +85,7 @@ const IndexPage = ({ data }) => (
                     </SectionGrid>
                 </Flex>
             </Container>
-        </Posts>
+        </Section>
         <Footer />
     </Layout>
 )
