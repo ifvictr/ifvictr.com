@@ -78,7 +78,6 @@ const IndexPage = ({ data }) => (
                     <SectionGrid>
                         {data.posts.edges
                             .map(({ node }) => node)
-                            .slice(0, 6)
                             .map(post => (
                                 <PostCard data={post} key={post.id} />
                             ))}
