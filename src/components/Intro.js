@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaDollarSign, FaEnvelope, FaGithub, FaLinkedinIn, FaMapPin, FaTwitter } from 'react-icons/fa'
+import { FaDollarSign, FaEnvelope, FaFile, FaGithub, FaLinkedinIn, FaMapPin, FaTwitter } from 'react-icons/fa'
 import { Box, Flex, Heading, Image, Link, Text } from 'rebass'
 import styled from 'styled-components'
 
@@ -98,7 +98,7 @@ const Intro = props => (
                 <Container maxWidth={32} ml={3}>
                     <Heading fontSize={6} mb={1}>Victor Truong</Heading>
                     <Box mb={3}>
-                        <Badge mr={2} bg="white" color="slate">
+                        <Badge bg="white" color="slate">
                             <FaMapPin /> Los Angeles, CA
                         </Badge>
                     </Box>
@@ -106,12 +106,13 @@ const Intro = props => (
                         Software developer, startup enthusiast, & neophiliac. Always building.
                     </Text>
                     <Services>
-                        <Service href="https://github.com/ifvictr" icon={FaGithub} />
-                        <Service href="https://linkedin.com/in/ifvictr" icon={FaLinkedinIn} />
-                        <Service href="https://twitter.com/ifvictr2" icon={FaTwitter} />
+                        <Service href="https://github.com/ifvictr" icon={FaGithub} title="GitHub" />
+                        <Service href="https://linkedin.com/in/ifvictr" icon={FaLinkedinIn} title="LinkedIn" />
+                        <Service href="https://twitter.com/ifvictr2" icon={FaTwitter} title="Twitter" />
                         <Separator />
-                        <Service href="https://paypal.me/ifvictr" icon={FaDollarSign} />
-                        <Service href="mailto:me@ifvictr.com" icon={FaEnvelope} />
+                        <Service href="https://ifvr.co/resume" icon={FaFile} title="Résumé" />
+                        <Service href="https://paypal.me/ifvictr" icon={FaDollarSign} title="PayPal" />
+                        <Service href="mailto:me@ifvictr.com" icon={FaEnvelope} title="Email" />
                     </Services>
                 </Container>
             </Flex>
