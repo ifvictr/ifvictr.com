@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { Flex, Heading, Text } from 'rebass'
 import styled from 'styled-components'
 
@@ -13,6 +14,7 @@ const Base = styled(Flex).attrs({ color: 'white', p: 4 })`
 
 const NotFoundPage = () => (
     <Layout>
+        <Helmet title="Not Found" />
         <style children={`
             body {
                 background-image: linear-gradient(
