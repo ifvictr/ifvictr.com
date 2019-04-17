@@ -122,8 +122,8 @@ export default () => (
                                 name
                                 description
                                 color
-                                links
                                 created_at
+                                project_url
                             }
                         }
                     }
