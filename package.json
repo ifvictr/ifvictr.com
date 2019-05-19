@@ -11,11 +11,13 @@
   "private": true,
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
+    "dotenv": "^7.0.0",
     "gatsby": "^2.3.23",
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-resolve-src": "^2.0.0",
     "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-source-airtable": "^2.0.6",
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-source-ghost": "^3.3.0",
     "gatsby-transformer-remark": "^2.3.8",

@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
     plugins: [
         {
@@ -21,6 +23,24 @@ module.exports = {
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-resolve-src',
         'gatsby-plugin-styled-components',
+        {
+            resolve: `gatsby-source-airtable`,
+            options: {
+                apiKey: process.env.AIRTABLE_API_KEY,
+                tables: [
+                    {
+                        baseId: process.env.AIRTABLE_BASE_ID,
+                        tableName: 'Events',
+                        tableView: 'Grid view'
+                    },
+                    {
+                        baseId: process.env.AIRTABLE_BASE_ID,
+                        tableName: 'Projects',
+                        tableView: 'Grid view'
+                    }
+                ]
+            }
+        },
         {
             resolve: 'gatsby-source-filesystem',
             options: {
