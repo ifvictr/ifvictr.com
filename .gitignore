@@ -1,5 +1,4 @@
 .cache/
 node_modules/
 public/
-posts.json
-projects.json
+.env
