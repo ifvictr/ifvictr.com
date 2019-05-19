@@ -5012,6 +5012,11 @@ gatsby-plugin-favicon@^3.1.6:
     html-react-parser "^0.6.4"
     lodash "^4.17.11"
 
+gatsby-plugin-gtag@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-gtag/-/gatsby-plugin-gtag-1.0.10.tgz#6e181ba67319adff2f1512ba23369954e8117d1c"
+  integrity sha512-euMp/ASUVL4Ear/FNPioNRG8u980RFeigTmS0pYyeUBqI5T3GcEm/6evc3KGwAWXWd4+e7UG6lofxWPtRDy9yw==
+
 gatsby-plugin-page-creator@^2.0.12:
   version "2.0.12"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.0.12.tgz#00a5103715881e141c81b68b670ad8fb06291b7d"
