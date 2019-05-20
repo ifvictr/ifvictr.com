@@ -58,8 +58,8 @@ module.exports = {
         {
             resolve: 'gatsby-source-ghost',
             options: {
-                apiUrl: 'https://cms.ifvictr.com',
-                contentApiKey: '865ddc4a0575e2adb5735966b5'
+                apiUrl: process.env.GHOST_API_URL,
+                contentApiKey: process.env.GHOST_CONTENT_API_KEY
             }
         },
         'gatsby-transformer-remark'
