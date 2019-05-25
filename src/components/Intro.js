@@ -108,7 +108,7 @@ const Intro = props => (
                     <Services>
                         <Service href="https://github.com/ifvictr" icon={FaGithub} title="GitHub" />
                         <Service href="https://linkedin.com/in/ifvictr" icon={FaLinkedinIn} title="LinkedIn" />
-                        <Service href="https://twitter.com/ifvictr2" icon={FaTwitter} title="Twitter" />
+                        <Service href="https://twitter.com/ifvictr" icon={FaTwitter} title="Twitter" />
                         <Separator />
                         <Service href="https://ifvr.co/resume" icon={FaFile} title="Résumé" />
                         <Service href="https://paypal.me/ifvictr" icon={FaDollarSign} title="PayPal" />
