@@ -103,7 +103,7 @@ const Intro = props => (
                         </Badge>
                     </Box>
                     <Text fontSize={3} mb={3}>
-                        Software developer, startup enthusiast, & neophiliac. Always building.
+                        Software developer with an affinity for the unfamiliar. Always wandering.
                     </Text>
                     <Services>
                         <Service href="https://github.com/ifvictr" icon={FaGithub} title="GitHub" />
