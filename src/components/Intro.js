@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaDollarSign, FaEnvelope, FaFile, FaGithub, FaLinkedinIn, FaMapPin, FaTwitter } from 'react-icons/fa'
+import { FaEnvelope, FaFile, FaGithubAlt, FaLinkedinIn, FaMapPin, FaTwitter } from 'react-icons/fa'
 import { Box, Flex, Heading, Image, Link, Text } from 'rebass'
 import styled from 'styled-components'
 
@@ -86,8 +86,6 @@ const Service = ({ href, icon: Icon, ...props }) => (
     />
 )
 
-const Separator = styled(Box).attrs({ mr: 2, children: '·' })``
-
 const Intro = props => (
     <Base alignItems="center" justifyContent="center" {...props}>
         <Container maxWidth={64} width={1} style={{ zIndex: 1 }}>
@@ -106,12 +104,10 @@ const Intro = props => (
                         Software developer with an affinity for the unfamiliar. Always wandering.
                     </Text>
                     <Services>
-                        <Service href="https://github.com/ifvictr" icon={FaGithub} title="GitHub" />
+                        <Service href="https://github.com/ifvictr" icon={FaGithubAlt} title="GitHub" />
                         <Service href="https://linkedin.com/in/ifvictr" icon={FaLinkedinIn} title="LinkedIn" />
                         <Service href="https://twitter.com/ifvictr" icon={FaTwitter} title="Twitter" />
-                        <Separator />
                         <Service href="https://ifvr.co/resume" icon={FaFile} title="Résumé" />
-                        <Service href="https://paypal.me/ifvictr" icon={FaDollarSign} title="PayPal" />
                         <Service href="mailto:me@ifvictr.com" icon={FaEnvelope} title="Email" />
                     </Services>
                 </Container>
