@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaEnvelope, FaFile, FaGithubAlt, FaLinkedinIn, FaMapPin, FaTwitter } from 'react-icons/fa'
+import { FaEnvelope, FaFile, FaGithubAlt, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import { Box, Flex, Heading, Image, Link, Text } from 'rebass'
 import styled from 'styled-components'
 
@@ -31,13 +31,14 @@ const Services = styled(Flex)`
 `
 
 const Badge = styled(Text.withComponent('span'))`
+    border: 2px solid ${({ theme }) => theme.colors.primary};
     border-radius: ${({ theme }) => theme.pill};
+    color: ${({ theme }) => theme.colors.primary};
     display: inline-block;
-    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.376));
-    font-weight: normal;
+    font-weight: bold;
     line-height: 1.25;
     text-shadow: none;
-    text-transform: uppercase;
+    text-transform: lowercase;
 `
 
 Badge.defaultProps = {
@@ -70,8 +71,11 @@ const Intro = props => (
                 <Container maxWidth={32} ml={3}>
                     <Heading fontSize={6} mb={1}>Victor Truong</Heading>
                     <Box mb={3}>
+                        <Badge bg="white" color="slate" mr={2}>
+                            aka @ifvictr
+                        </Badge>
                         <Badge bg="white" color="slate">
-                            <FaMapPin /> Los Angeles, CA
+                            Los Angeles, CA
                         </Badge>
                     </Box>
                     <Text color="muted" fontSize={3} mb={3}>
