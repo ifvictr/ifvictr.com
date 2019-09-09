@@ -43,16 +43,13 @@ module.exports = {
                     {
                         baseId: process.env.AIRTABLE_BASE_ID,
                         tableName: 'Projects',
-                        tableView: 'Grid view'
+                        tableView: 'Grid view',
+                        // Fix: Airtable doesn't deliver empty columns: https://github.com/jbolda/gatsby-source-airtable/issues/47
+                        defaultValues: {
+                            Is_hidden: false
+                        }
                     }
                 ]
-            }
-        },
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                name: 'projects',
-                path: `${__dirname}/data/projects`
             }
         },
         {

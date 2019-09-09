@@ -58,7 +58,7 @@ const IndexPage = ({ data }) => (
                     </SectionDescription>
                     <SectionGrid>
                         {data.projects.edges
-                            .map(({ node }) => node.frontmatter)
+                            .map(({ node }) => node.data)
                             .map(project => (
                                 <ProjectCard data={project} key={project.name} />
                             ))}
@@ -109,21 +109,22 @@ export default () => (
                         }
                     }
                 }
-                projects: allMarkdownRemark(
+                projects: allAirtable(
                     filter: {
-                        fileAbsolutePath: { regex: "/(/data/projects)/.*.md$/" }
+                        table: { eq: "Projects" }
+                        data: { Is_hidden: { ne: true } }
                     }
-                    # limit: 6
-                    sort: { order: DESC, fields: [frontmatter___created_at] }
+                    sort: { order: DESC, fields: [data___Created_at] }
                 ) {
                     edges {
                         node {
-                            frontmatter {
-                                name
-                                description
-                                color
-                                created_at
-                                project_url
+                            data {
+                                name: Name
+                                description: Description
+                                background: Background
+                                project_url: Project_URL
+                                created_at: Created_at
+                                is_hidden: Is_hidden
                             }
                         }
                     }

@@ -28,7 +28,7 @@ const ProjectName = styled(Heading).attrs({ fontSize: 4 })``
 
 const ProjectCard = ({ data, ...props }) => (
     <Base {...props}>
-        <Inner href={data.project_url} target="_blank" style={{ background: data.color }}>
+        <Inner href={data.project_url} target="_blank" style={{ background: data.background }}>
             <ProjectName mb={2}>{data.name}</ProjectName>
             <Text>{data.description}</Text>
         </Inner>
