@@ -29,11 +29,11 @@ const SectionDescription = styled(Box).attrs({
 `
 
 const SectionHeading = styled(Heading).attrs({
+    color: 'primary',
     fontSize: 5,
-    fontWeight: 300,
+    fontWeight: 600,
     mb: 2
 })`
-    box-shadow: inset 0 -4px 0 0 ${({ theme }) => theme.colors.primary};
     display: inline-block;
     text-transform: lowercase;
 `
