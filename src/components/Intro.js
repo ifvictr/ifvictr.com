@@ -7,6 +7,11 @@ import Container from 'components/Container'
 import theme, { cx } from 'theme'
 
 const Base = styled(Flex).attrs({ p: 4, pb: 5 })`
+    background-image: linear-gradient(
+        to bottom,
+        ${({ theme }) => theme.colors.white},
+        ${({ theme }) => theme.colors.snow}
+    );
     min-height: 50vh;
     position: relative;
 `
