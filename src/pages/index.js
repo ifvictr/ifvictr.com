@@ -114,6 +114,7 @@ export default () => (
                         table: { eq: "Projects" }
                         data: { Is_hidden: { ne: true } }
                     }
+                    limit: 10
                     sort: { order: DESC, fields: [data___Created_at] }
                 ) {
                     edges {
