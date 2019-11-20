@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Link, Text } from 'rebass'
+import { Box, Flex, Text } from 'rebass'
 import styled from 'styled-components'
 
 import Container from 'components/Container'
@@ -11,9 +11,6 @@ const Footer = props => (
         <Container maxWidth={64}>
             <Flex justifyContent="space-between">
                 <Text>© 2014-2019 Victor Truong</Text>
-                <Link href="https://github.com/ifvictr/ifvictr.com" target="_blank" color="info">
-                    View source code
-                </Link>
             </Flex>
         </Container>
     </Base>
