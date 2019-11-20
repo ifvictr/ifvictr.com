@@ -4,9 +4,9 @@ import { Box, Flex, Heading, Image, Link, Text } from 'rebass'
 import styled from 'styled-components'
 
 import Container from 'components/Container'
-import theme, { cx } from 'theme'
+import theme from 'theme'
 
-const Base = styled(Flex).attrs({ p: 4, pb: 5 })`
+const Base = styled(Flex).attrs({ p: 4 })`
     background-image: linear-gradient(
         to bottom,
         ${({ theme }) => theme.colors.white},
