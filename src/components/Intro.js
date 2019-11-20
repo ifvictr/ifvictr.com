@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaEnvelope, FaFile, FaGithubAlt, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
+import { FaEnvelope, FaGithubAlt, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import { Box, Flex, Heading, Image, Link, Text } from 'rebass'
 import styled from 'styled-components'
 
@@ -77,7 +77,7 @@ const Intro = props => (
                     <Heading fontSize={6} mb={1}>Victor Truong</Heading>
                     <Box mb={3}>
                         <Badge bg="white" color="slate" mr={2}>
-                            aka @ifvictr
+                            @ifvictr
                         </Badge>
                         <Badge bg="white" color="slate">
                             Los Angeles, CA
@@ -90,7 +90,6 @@ const Intro = props => (
                         <Service href="https://github.com/ifvictr" icon={FaGithubAlt} title="GitHub" />
                         <Service href="https://linkedin.com/in/ifvictr" icon={FaLinkedinIn} title="LinkedIn" />
                         <Service href="https://twitter.com/ifvictr" icon={FaTwitter} title="Twitter" />
-                        <Service href="https://ifvr.co/resume" icon={FaFile} title="Résumé" />
                         <Service href="mailto:me@ifvictr.com" icon={FaEnvelope} title="Email" />
                     </Services>
                 </Container>
