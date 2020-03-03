@@ -10,7 +10,7 @@ const Footer = props => (
     <Base align="center" {...props}>
         <Container maxWidth={64}>
             <Flex justifyContent="space-between">
-                <Text>© 2014-2019 Victor Truong</Text>
+                <Text>© 2020 Victor Truong</Text>
             </Flex>
         </Container>
     </Base>
