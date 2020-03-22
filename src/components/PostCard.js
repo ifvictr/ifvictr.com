@@ -37,9 +37,9 @@ const color = value => {
     return palette[paletteKeys[key(value) % paletteKeys.length]]
 }
 
-const prettyTimestamp = timestamp => {
+const toISODate = timestamp => {
     const date = new Date(timestamp)
-    return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate() + 1}`
+    return date.toISOString().slice(0, 10)
 }
 
 const PostCard = ({ data, ...props }) => {
@@ -57,7 +57,7 @@ const PostCard = ({ data, ...props }) => {
                     )`
                 }}
             >
-                <Text color="white" mb={1}>{prettyTimestamp(data.published_at)}</Text>
+                <Text color="white" mb={1}>{toISODate(data.published_at)}</Text>
                 <PostName>{data.title}</PostName>
             </Inner>
         </Base>
