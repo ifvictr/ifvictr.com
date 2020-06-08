@@ -90,7 +90,7 @@ const Intro = props => (
                         <Service href="https://github.com/ifvictr" icon={FaGithubAlt} title="GitHub" />
                         <Service href="https://linkedin.com/in/ifvictr" icon={FaLinkedinIn} title="LinkedIn" />
                         <Service href="https://twitter.com/ifvictr" icon={FaTwitter} title="Twitter" />
-                        <Service href="mailto:me@ifvictr.com" icon={FaEnvelope} title="Email" />
+                        <Service href="mailto:victor@victortruong.com" icon={FaEnvelope} title="Email" />
                     </Services>
                 </Container>
             </Flex>
