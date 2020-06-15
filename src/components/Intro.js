@@ -82,6 +82,9 @@ const Intro = props => (
                         <Badge bg="white" color="slate">
                             Los Angeles, CA
                         </Badge>
+                        <Badge bg="white" color="slate">
+                            he/him/his
+                        </Badge>
                     </Box>
                     <Text color="muted" fontSize={3} mb={3}>
                         Software developer with an affinity for the unfamiliar. Always wandering.
