@@ -79,7 +79,7 @@ const Intro = props => (
                         <Badge bg="white" color="slate" mr={2}>
                             @ifvictr
                         </Badge>
-                        <Badge bg="white" color="slate">
+                        <Badge bg="white" color="slate" mr={2}>
                             Los Angeles, CA
                         </Badge>
                         <Badge bg="white" color="slate">
