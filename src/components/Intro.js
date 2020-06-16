@@ -80,10 +80,10 @@ const Intro = props => (
                             @ifvictr
                         </Badge>
                         <Badge bg="white" color="slate" mr={2}>
-                            Los Angeles, CA
+                            he/him/his
                         </Badge>
                         <Badge bg="white" color="slate">
-                            he/him/his
+                            Los Angeles, CA
                         </Badge>
                     </Box>
                     <Text color="muted" fontSize={3} mb={3}>
