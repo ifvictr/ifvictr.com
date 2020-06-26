@@ -36,9 +36,8 @@ const Services = styled(Flex)`
 `
 
 const Badge = styled(Text.withComponent('span'))`
-    border: 2px solid ${({ theme }) => theme.colors.primary};
+    border: 2px solid ${({ theme }) => theme.colors.slate};
     border-radius: ${({ theme }) => theme.pill};
-    color: ${({ theme }) => theme.colors.primary};
     display: inline-block;
     font-weight: bold;
     line-height: 1.25;
@@ -48,8 +47,8 @@ const Badge = styled(Text.withComponent('span'))`
 
 Badge.defaultProps = {
     theme,
-    bg: 'primary',
-    color: 'white',
+    bg: 'white',
+    color: 'slate',
     fontSize: 1,
     px: 2,
     py: 1
@@ -76,17 +75,17 @@ const Intro = props => (
                 <Container maxWidth={32} ml={3}>
                     <Heading fontSize={6} mb={1}>Victor Truong</Heading>
                     <Box mb={3}>
-                        <Badge bg="white" color="slate" mr={2}>
+                        <Badge mr={2}>
                             @ifvictr
                         </Badge>
-                        <Badge bg="white" color="slate" mr={2}>
+                        <Badge mr={2}>
                             he/him/his
                         </Badge>
-                        <Badge bg="white" color="slate">
+                        <Badge>
                             Los Angeles, CA
                         </Badge>
                     </Box>
-                    <Text color="muted" fontSize={3} mb={3}>
+                    <Text color="slate" fontSize={3} mb={3}>
                         Software developer with an affinity for the unfamiliar. Always wandering.
                     </Text>
                     <Services>

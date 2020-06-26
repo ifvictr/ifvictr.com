@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => (
                 <Flex /* flexDirection={['column', null, 'row']} */>
                     <SectionDescription>
                         <SectionHeading>Projects</SectionHeading>
-                        <Text color="muted">
+                        <Text color="slate">
                             A few projects I’ve built/collabed on recently.
                         </Text>
                     </SectionDescription>
@@ -71,7 +71,7 @@ const IndexPage = ({ data }) => (
                 <Flex /* flexDirection={['column', null, 'row']} */>
                     <SectionDescription>
                         <SectionHeading>Posts</SectionHeading>
-                        <Text color="muted">
+                        <Text color="slate">
                             Writing about anything, really.
                         </Text>
                     </SectionDescription>
