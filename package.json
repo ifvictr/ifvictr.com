@@ -1,14 +1,14 @@
 {
-  "name": "ifvictr.com",
+  "name": "victortruong.com",
   "version": "5.0.0",
+  "private": true,
+  "repository": "https://github.com/ifvictr/victortruong.com",
+  "license": "MIT",
+  "author": "Victor Truong <victor@victortruong.com>",
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop"
   },
-  "repository": "https://github.com/ifvictr/ifvictr.com",
-  "author": "Victor Truong <me@ifvictr.com>",
-  "license": "MIT",
-  "private": true,
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "dotenv": "^7.0.0",
