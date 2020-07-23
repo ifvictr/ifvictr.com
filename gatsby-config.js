@@ -20,13 +20,6 @@ module.exports = {
                 }
             }
         },
-        {
-            resolve: 'gatsby-plugin-gtag',
-            options: {
-                trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
-                anonymize: true
-            }
-        },
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-resolve-src',
         'gatsby-plugin-styled-components',
