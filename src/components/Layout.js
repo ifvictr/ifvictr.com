@@ -53,7 +53,7 @@ const name = 'Victor Truong'
 const title = name
 const description = ''
 const image = ''
-const url = 'https://ifvictr.com'
+const url = 'https://victortruong.com'
 
 const Layout = ({ children }) => (
   <Fragment>
