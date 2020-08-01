@@ -5,28 +5,28 @@ const violet = '#9370db'
 export const palette = palx(violet)
 
 export const grays = {
-    black: palette.black,
-    slate: palette.gray[8],
-    silver: palette.gray[7],
-    smoke: palette.gray[2],
-    snow: palette.gray[0],
-    white: '#ffffff'
+  black: palette.black,
+  slate: palette.gray[8],
+  silver: palette.gray[7],
+  smoke: palette.gray[2],
+  snow: palette.gray[0],
+  white: '#ffffff'
 }
 
 export const brand = {
-    primary: violet,
-    accent: palette.indigo[4],
-    success: palette.teal[5],
-    info: palette.blue[5],
-    warning: palette.orange[5],
-    error: palette.red[7],
-    muted: grays.silver
+  primary: violet,
+  accent: palette.indigo[4],
+  success: palette.teal[5],
+  info: palette.blue[5],
+  warning: palette.orange[5],
+  error: palette.red[7],
+  muted: grays.silver
 }
 
 export const colors = {
-    ...brand,
-    ...grays,
-    ...palette
+  ...brand,
+  ...grays,
+  ...palette
 }
 
 export const cx = key => get(colors, key, key)
@@ -34,22 +34,22 @@ export const cx = key => get(colors, key, key)
 const createMediaQuery = n => `@media screen and (min-width:${n}em)`
 
 const addAliases = (arr, aliases) =>
-    aliases.forEach((key, i) =>
-        Object.defineProperty(arr, key, {
-            enumerable: false,
-            get() {
-                return this[i]
-            }
-        })
-    )
+  aliases.forEach((key, i) =>
+    Object.defineProperty(arr, key, {
+      enumerable: false,
+      get() {
+        return this[i]
+      }
+    })
+  )
 
 const aliases = ['sm', 'md', 'lg', 'xl']
 export const breakpoints = [32, 48, 64, 80]
 
 export const mediaQueries = {
-    ...breakpoints.map(createMediaQuery),
-    reduceMotion: '@media (prefers-reduced-motion: reduce)',
-    reduceTransparency: '@media (prefers-reduced-transparency: reduce)'
+  ...breakpoints.map(createMediaQuery),
+  reduceMotion: '@media (prefers-reduced-motion: reduce)',
+  reduceTransparency: '@media (prefers-reduced-transparency: reduce)'
 }
 
 addAliases(breakpoints, aliases)
@@ -80,49 +80,48 @@ export const radius = '4px'
 export const shadowColor = 'rgba(0, 0, 0, 0.16)'
 export const baseShadow = '0 0 2px 0 rgba(0, 0, 0, 0.08),'
 export const boxShadows = [
-    baseShadow + `0 2px 4px 0 ${shadowColor}`,
-    baseShadow + `0 4px 8px 0 ${shadowColor}`,
-    baseShadow + `0 12px 12px 0 ${shadowColor}`,
-    baseShadow + `0 24px 24px 0 ${shadowColor}`
+  baseShadow + `0 2px 4px 0 ${shadowColor}`,
+  baseShadow + `0 4px 8px 0 ${shadowColor}`,
+  baseShadow + `0 12px 12px 0 ${shadowColor}`,
+  baseShadow + `0 24px 24px 0 ${shadowColor}`
 ]
 
 export const hexa = (color, alpha) => {
-    const hex = cx(color)
-    if (!includes(hex, '#')) {
-        return shadowColor
-    }
-    const r = parseInt(hex.slice(1, 3), 16)
-    const g = parseInt(hex.slice(3, 5), 16)
-    const b = parseInt(hex.slice(5, 7), 16)
+  const hex = cx(color)
+  if (!includes(hex, '#')) {
+    return shadowColor
+  }
+  const r = parseInt(hex.slice(1, 3), 16)
+  const g = parseInt(hex.slice(3, 5), 16)
+  const b = parseInt(hex.slice(5, 7), 16)
 
-    if (alpha >= 0) {
-        return `rgba(${r}, ${g}, ${b}, ${alpha})`
-    }
-    else {
-        return `rgb(${r}, ${g}, ${b})`
-    }
+  if (alpha >= 0) {
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`
+  } else {
+    return `rgb(${r}, ${g}, ${b})`
+  }
 }
 
 const theme = {
-    breakpoints,
-    mediaQueries,
-    space,
-    mono,
-    font,
-    fontSizes,
-    fontWeights,
-    regular,
-    bold,
-    colors,
-    radii,
-    radius,
-    pill,
-    scaleFactor,
-    transition,
-    boxShadows,
-    shadowColor,
-    cx,
-    hexa
+  breakpoints,
+  mediaQueries,
+  space,
+  mono,
+  font,
+  fontSizes,
+  fontWeights,
+  regular,
+  bold,
+  colors,
+  radii,
+  radius,
+  pill,
+  scaleFactor,
+  transition,
+  boxShadows,
+  shadowColor,
+  cx,
+  hexa
 }
 
 export default theme
