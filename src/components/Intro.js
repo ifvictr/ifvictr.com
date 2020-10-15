@@ -90,8 +90,7 @@ const Intro = props => (
             <Badge>Los Angeles, CA</Badge>
           </Box>
           <Text color="slate" fontSize={3} mb={3}>
-            Software developer with an affinity for the unfamiliar. Always
-            wandering.
+            Building random things and wandering. Fairly quiet.
           </Text>
           <Services>
             <Service
