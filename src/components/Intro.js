@@ -86,7 +86,6 @@ const Intro = props => (
           </Heading>
           <Box mb={3}>
             <Badge mr={2}>@ifvictr</Badge>
-            <Badge mr={2}>he/him/his</Badge>
             <Badge>Los Angeles, CA</Badge>
           </Box>
           <Text color="slate" fontSize={3} mb={3}>
