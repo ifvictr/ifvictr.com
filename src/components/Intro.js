@@ -76,7 +76,7 @@ const Intro = props => (
       <Flex alignItems="center">
         <Box mr={3}>
           <Avatar
-            src="https://gravatar.com/avatar/82c79c6a2c438c0d9c113cc543012db3?s=200"
+            src="https://gravatar.com/avatar/1db290be3692ea1771279eaf773725c4?s=200"
             alt="Victor Truong"
           />
         </Box>
