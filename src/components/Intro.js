@@ -89,7 +89,7 @@ const Intro = props => (
             <Badge>Los Angeles, CA</Badge>
           </Box>
           <Text color="slate" fontSize={3} mb={3}>
-            Building random things and wandering. Fairly quiet.
+            Building random things and wandering.
           </Text>
           <Services>
             <Service
