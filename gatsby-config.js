@@ -24,7 +24,7 @@ module.exports = {
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-source-airtable`,
+      resolve: 'gatsby-source-airtable',
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
         tables: [
