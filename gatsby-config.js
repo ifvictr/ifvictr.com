@@ -20,6 +20,13 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: 'gatsby-plugin-plausible',
+      options: {
+        customDomain: 'p.ifvictr.com',
+        domain: 'victortruong.com'
+      }
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-styled-components',
