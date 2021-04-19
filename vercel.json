@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "destination": "https://cms.ifvictr.com/:slug/",
+      "source": "/posts/:slug"
+    }
+  ]
+}

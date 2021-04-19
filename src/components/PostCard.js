@@ -48,7 +48,7 @@ const PostCard = ({ data, ...props }) => {
   return (
     <Base {...props}>
       <Inner
-        href={`https://cms.ifvictr.com/${data.slug}`}
+        href={`/posts/${data.slug}`}
         style={{
           backgroundImage: `linear-gradient(24deg, ${base[7]}, ${base[5]}, ${base[3]})`
         }}
