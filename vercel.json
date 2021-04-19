@@ -2,9 +2,10 @@
   "github": {
     "silent": true
   },
-  "rewrites": [
+  "redirects": [
     {
       "destination": "https://cms.ifvictr.com/:slug/",
+      "permanent": false,
       "source": "/posts/:slug"
     }
   ]
