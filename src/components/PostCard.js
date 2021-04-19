@@ -1,4 +1,3 @@
-// import { Link } from 'gatsby'
 import React from 'react'
 import { Card, Flex, Heading, Link, Text } from 'rebass'
 import styled from 'styled-components'
@@ -49,14 +48,9 @@ const PostCard = ({ data, ...props }) => {
   return (
     <Base {...props}>
       <Inner
-        href={`https://blog.ifvictr.com/${data.slug}`}
+        href={`https://cms.ifvictr.com/${data.slug}`}
         style={{
-          backgroundImage: `linear-gradient(
-                        24deg,
-                        ${base[7]},
-                        ${base[5]},
-                        ${base[3]}
-                    )`
+          backgroundImage: `linear-gradient(24deg, ${base[7]}, ${base[5]}, ${base[3]})`
         }}
       >
         <Text color="white" mb={1}>
