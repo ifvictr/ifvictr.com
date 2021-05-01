@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  FaEnvelope,
-  FaGithubAlt,
-  FaLinkedinIn,
-  FaTwitter
-} from 'react-icons/fa'
+import { FaEnvelope, FaGithubAlt, FaTwitter } from 'react-icons/fa'
 import { Box, Flex, Heading, Image, Link, Text } from 'rebass'
 import styled from 'styled-components'
 
@@ -101,11 +96,6 @@ const Intro = props => (
               href="https://twitter.com/ifvictr"
               icon={FaTwitter}
               title="Twitter"
-            />
-            <Service
-              href="https://linkedin.com/in/ifvictr"
-              icon={FaLinkedinIn}
-              title="LinkedIn"
             />
             <Service
               href="mailto:victor@victortruong.com"
