@@ -22,7 +22,7 @@
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-source-ghost": "^3.3.0",
     "gatsby-transformer-remark": "^2.3.8",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "palx": "^1.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
